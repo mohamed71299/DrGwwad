@@ -62,12 +62,16 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="main-heading">Contact Me</h2>
-            <form action="">
-                <input type="text" placeholder="Your Name" class="main-input">
-                <input type="email" placeholder="Your Email" class="main-input">
-                <textarea name="" id="" placeholder="Your Message" class="main-input"></textarea>
-                <input type="submit" value="Send Message">
-              </form>
+            <form method="post" action="https://formspree.io/f/moqrwkoe" id="my-form">
+                <!-- Name --><input type="text" name="name" class="main-input" placeholder="Your Name"/>
+                <!-- Email field (required) -->
+                <input type="text" name="email" class="main-input" placeholder="Your Email" required/>
+                <textarea name="message" class="main-input" placeholder="Your Message"></textarea>
+                <div class="send">
+                    <div id="my-form-status" class="status"></div>
+                    <input type="submit" value="Send"/>
+                </div>
+            </form>
         </div>
     </section>
     <!-- Start Footer -->
@@ -90,5 +94,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
