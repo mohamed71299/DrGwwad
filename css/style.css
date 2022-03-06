@@ -191,13 +191,33 @@ header .bullets span {
 .contact form textarea.main-input {
   height: 200px;
 }
+.contact form .send {
+  display: flex;
+  justify-content: space-between;
+}
+.contact form .status.success {
+  color: var(--main-color);
+  animation: status 3s ease 2s;
+  -webkit-animation: status 3s ease 2s forwards;
+}
+.contact form .status.error {
+  color: red;
+  animation: status 3s ease 2s forwards;
+  -webkit-animation: status 3s ease 2s forwards;
+}
+@keyframes status {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .contact form input[type="submit"] {
   background-color: var(--main-color);
   color: white;
   padding: 20px;
   border: none;
-  display: flex;
-  margin-left: auto;
   text-transform: uppercase;
   cursor: pointer;
 }
